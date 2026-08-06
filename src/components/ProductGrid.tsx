@@ -213,7 +213,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
               <span>Flagship Atelier Catalog</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[#0F172A] tracking-tight">
-              THINC Collections <span className="text-lg font-mono text-slate-400 font-normal">({products.length} Garments)</span>
+              THINC <span className="text-lg font-mono text-slate-400 font-normal">({products.length} Garments)</span>
             </h2>
           </div>
 
