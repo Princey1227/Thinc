@@ -37,7 +37,7 @@ export const PRODUCTS: Product[] = [
     colorName: 'Deep Raw Indigo',
     colorHex: '#1E293B',
     images: ['/images/thinc_men_jean_raw_indigo.png', '/images/thinc_macro_selvage_1785955846444.png'],
-    description: 'Unwashed raw selvage denim in deep dark indigo handcrafted on shuttle looms with contrasting gold orange stitching and cuff turn-up.',
+    description: 'Unwashed pure organic Indian denim in deep dark indigo handcrafted with contrasting gold orange stitching and cuff turn-up.',
     details: ['100% Organic Ring-Spun Cotton', 'Solid Copper Punch Rivets', 'Signature Crimson Selvage Edge', 'Lifetime Free Repairs'],
     availableSizes: ['28', '30', '32', '34', '36'],
     isBestSeller: true,

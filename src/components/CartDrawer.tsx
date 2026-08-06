@@ -141,7 +141,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 <CheckCircle2 size={64} className="text-emerald-600 mb-4 animate-bounce" />
                 <h4 className="text-2xl font-serif font-bold text-[#0F172A] mb-2">Order Confirmed!</h4>
                 <p className="text-sm text-slate-600 mb-6 font-light">
-                  Your THINC raw selvage denim order has been logged. Estimated delivery: <strong className="text-[#0F172A]">{deliveryDateString}</strong>.
+                  Your THINC pure denim order has been logged. Estimated delivery: <strong className="text-[#0F172A]">{deliveryDateString}</strong>.
                 </p>
                 <p className="text-xs font-mono text-slate-500 mb-8">Tracking Order #: THINC-IND-{Math.floor(100000 + Math.random() * 900000)}</p>
                 <button
@@ -160,7 +160,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 {items.length === 0 ? (
                   <div className="text-center py-16 text-slate-400">
                     <p className="font-serif italic text-lg text-slate-600 mb-2">Your bag is currently empty.</p>
-                    <p className="text-xs font-mono">Explore our raw selvage collection to select garments.</p>
+                    <p className="text-xs font-mono">Explore our denim collection to select garments.</p>
                   </div>
                 ) : (
                   <>

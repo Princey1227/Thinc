@@ -43,7 +43,7 @@ export const FadeEvolutionGallery: React.FC = () => {
             Built to Age With You
           </h2>
           <p className="text-sm text-slate-600 font-light leading-relaxed">
-            Raw denim is a living fabric. Explore how THINC raw selvage evolves from Day 1 to Day 365.
+            Raw denim is a living fabric. Explore how THINC organic denim evolves from Day 1 to Day 365.
           </p>
         </div>
 

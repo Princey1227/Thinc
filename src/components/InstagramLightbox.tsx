@@ -8,14 +8,14 @@ export const InstagramLightbox: React.FC = () => {
   const posts = [
     { src: "/images/thinc_hero_denim_1785955764023.png", handle: "@thinc.raw_tokyo", likes: "2,420" },
     { src: "/images/thinc_jean_straight_1785955777595.png", handle: "@atelier_thinc", likes: "3,890" },
-    { src: "/images/thinc_jean_tapered_1785955795434.png", handle: "@thinc_selvage_journal", likes: "4,110" },
+    { src: "/images/thinc_jean_tapered_1785955795434.png", handle: "@thinc_denim_journal", likes: "4,110" },
     { src: "/images/thinc_jean_onyx_1785955816324.png", handle: "@thinc_street_okayama", likes: "1,980" },
     { src: "/images/thinc_macro_selvage_1785955846444.png", handle: "@thinc_denim_couture", likes: "5,500" },
     { src: "/images/thinc_hero_denim_1785955764023.png", handle: "@thinc.denim", likes: "6,120" }
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-[#FAF8F5] border-t border-gray-200/80 relative">
+    <section className="py-8 md:py-10 bg-[#FAF8F5] border-t border-gray-200/80 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-xs uppercase font-mono tracking-[0.3em] text-[#1E3A8A] font-bold mb-2 block flex items-center justify-center gap-2">

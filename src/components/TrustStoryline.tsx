@@ -30,7 +30,7 @@ export const TrustStoryline: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-[#FAF8F5] border-t border-gray-200/80 relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-[#FAF8F5] border-t border-gray-200/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Quick Trust Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 crisp-panel rounded-2xl mb-14 text-center">
@@ -69,9 +69,9 @@ export const TrustStoryline: React.FC = () => {
               40 Years of Denim Craft. Delivered Direct to You.
             </h2>
             <p className="text-sm text-slate-700 font-light leading-relaxed mb-6">
-              For four decades, our artisans have crafted raw selvage denim for international luxury houses. By cutting out middleman markups, we deliver ₹12,000-grade raw denim directly to Indian denim purists for ₹4,999.
+              For four decades, our artisans have crafted premium Indian denim for international luxury houses. By cutting out middleman markups, we deliver ₹12,000-grade pure denim directly to Indian denim purists for ₹4,999.
             </p>
-            
+
             <div className="flex flex-col gap-3 font-mono text-xs text-slate-700">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-emerald-600" />

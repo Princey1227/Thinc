@@ -3,7 +3,7 @@ import { Award, MapPin, Globe, Phone, Users, ShieldCheck, Quote } from 'lucide-r
 
 export const AboutUsStoryline: React.FC = () => {
   return (
-    <section id="about-us" className="py-20 md:py-28 bg-[#FAF8F5] border-t border-gray-200/80 relative overflow-hidden">
+    <section id="about-us" className="py-8 md:py-10 bg-[#FAF8F5] border-t border-gray-200/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -14,7 +14,7 @@ export const AboutUsStoryline: React.FC = () => {
             The Story of Punit Creations
           </h2>
           <p className="text-base text-slate-600 font-light leading-relaxed">
-            Founded by <strong className="text-[#0F172A]">Manoj Agrawal</strong> in 1996 — Three decades of mastery in woven fabrics, garment manufacturing, and raw selvage engineering.
+            Founded by <strong className="text-[#0F172A]">Manoj Agrawal</strong> in 1996 — Three decades of mastery in woven fabrics, garment manufacturing, and pure denim engineering.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export const AboutUsStoryline: React.FC = () => {
               </div>
 
               <p className="text-sm text-slate-700 font-light leading-relaxed mb-4">
-                Under the leadership of <strong className="text-[#0F172A] font-semibold">Manoj Agrawal</strong>, Punit Creations has operated out of Mumbai, Maharashtra for nearly 30 years. Today, the atelier specializes in premium woven apparel, organic ring-spun cotton, and heavy shuttle-loom selvage denim.
+                Under the leadership of <strong className="text-[#0F172A] font-semibold">Manoj Agrawal</strong>, Punit Creations has operated out of Mumbai, Maharashtra for nearly 30 years. Today, the atelier specializes in premium woven apparel, organic ring-spun cotton, and heavy organic Indian denim.
               </p>
             </div>
 

@@ -21,7 +21,7 @@ export const DenimInspector: React.FC = () => {
       name: "Crimson Selvage Ticking ID",
       image: "/images/thinc_jean_straight_1785955777595.png",
       headline: "Authentic Shuttle Edge",
-      description: "The red selvage ticker is THINC's mark of authentic shuttle-loom weaving, preventing unraveling and giving every cuff fold a clean signature line.",
+      description: "The signature crimson seam ticker is THINC's mark of authentic Indian denim weaving, preventing unraveling and giving every fold a clean line.",
       tag: "Signature Ticking",
       specs: ["Shuttle Loom Woven", "Self-Edge Anti-Fray Stitch", "Hand-Inspected Edge"]
     },
@@ -46,7 +46,7 @@ export const DenimInspector: React.FC = () => {
   const current = presets[activePreset];
 
   return (
-    <section id="inspector" className="py-16 md:py-20 bg-[#FAF8F5] relative overflow-hidden border-y border-gray-200/80">
+    <section id="inspector" className="py-8 md:py-10 bg-[#FAF8F5] relative overflow-hidden border-y border-gray-200/80">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">

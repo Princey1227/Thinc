@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
             </span>
             <h3 className="text-3xl font-serif font-bold text-white mb-2">Join the Private Drop List</h3>
             <p className="text-sm text-slate-300 font-light">
-              Receive private invitations to limited raw selvage denim drops and brand releases.
+              Receive private invitations to limited Indian denim drops and brand releases.
             </p>
           </div>
 

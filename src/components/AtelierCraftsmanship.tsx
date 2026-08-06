@@ -17,7 +17,7 @@ export const AtelierCraftsmanship: React.FC = () => {
       sub: "Authentic Selvage Loom",
       icon: Cpu,
       image: "/images/thinc_macro_selvage_1785955846444.png",
-      desc: "Woven at low tension to create an uncut selvage edge. This traditional weave ensures your denim holds shape while molding naturally to your body."
+      desc: "Woven at low tension to create a durable Indian weave. This traditional craft ensures your denim holds shape while molding naturally to your body."
     },
     {
       title: "3. Deep Indigo Vatting",
@@ -38,7 +38,7 @@ export const AtelierCraftsmanship: React.FC = () => {
   const current = steps[activeStep];
 
   return (
-    <section id="craftsmanship" className="py-16 md:py-20 bg-[#FAF8F5] border-t border-gray-200/80 relative overflow-hidden">
+    <section id="craftsmanship" className="py-8 md:py-10 bg-[#FAF8F5] border-t border-gray-200/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
