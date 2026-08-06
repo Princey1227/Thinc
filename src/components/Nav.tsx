@@ -67,6 +67,17 @@ export const Nav: React.FC<NavProps> = ({
     }
   };
 
+  const handleAccessoriesClick = () => {
+    onSelectAudience('All');
+    onSelectCategory('Accessories');
+    setCollectionsDropdownOpen(false);
+    setMobileMenuOpen(false);
+    const collectionEl = document.getElementById('collection');
+    if (collectionEl) {
+      collectionEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleSubCategorySelect = (audience: string, category: string) => {
     onSelectAudience(audience);
     onSelectCategory(category);
@@ -129,10 +140,10 @@ export const Nav: React.FC<NavProps> = ({
               : undefined
           }
         >
-          <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between relative">
+          <div className="w-full px-4 sm:px-8 lg:px-10 flex items-center justify-between relative">
             
             {/* LEFT CORNER: MOBILE HAMBURGER MENU / DESKTOP SHOP, COLLECTIONS & ABOUT */}
-            <div className="flex items-center gap-4 z-10">
+            <div className="flex items-center gap-6 z-10">
               {/* Mobile Hamburger Button */}
               <button
                 onClick={() => setMobileMenuOpen(true)}
@@ -144,12 +155,12 @@ export const Nav: React.FC<NavProps> = ({
                 <Menu size={22} strokeWidth={1.5} />
               </button>
 
-              {/* Desktop Only Navigation Links */}
-              <div className="hidden lg:flex items-center gap-10 md:gap-12">
+              {/* Desktop Only Navigation Links - FULL LEFT ALIGNED */}
+              <div className="hidden lg:flex items-center gap-5 xl:gap-7">
                 {/* SHOP button */}
                 <button
                   onClick={handleShopClick}
-                  className={`text-[15px] uppercase tracking-[2px] font-medium transition-colors py-1 cursor-pointer ${
+                  className={`text-xs xl:text-sm uppercase tracking-[1.5px] xl:tracking-[2px] font-medium transition-colors py-1 cursor-pointer ${
                     isNavActive
                       ? 'text-[#0F172A] hover:text-[#C8A46A]'
                       : 'text-white hover:text-[#C8A46A] drop-shadow-md'
@@ -162,7 +173,7 @@ export const Nav: React.FC<NavProps> = ({
                 <div className="relative">
                   <button
                     onClick={() => setCollectionsDropdownOpen(!collectionsDropdownOpen)}
-                    className={`text-[15px] uppercase tracking-[2px] font-medium transition-colors py-1 cursor-pointer flex items-center gap-1.5 ${
+                    className={`text-xs xl:text-sm uppercase tracking-[1.5px] xl:tracking-[2px] font-medium transition-colors py-1 cursor-pointer flex items-center gap-1 ${
                       isNavActive
                         ? 'text-[#0F172A] hover:text-[#C8A46A]'
                         : 'text-white hover:text-[#C8A46A] drop-shadow-md'
@@ -170,7 +181,7 @@ export const Nav: React.FC<NavProps> = ({
                   >
                     COLLECTIONS
                     <ChevronDown
-                      size={14}
+                      size={13}
                       className={`transition-transform duration-300 ${
                         collectionsDropdownOpen
                           ? 'rotate-180 text-[#C8A46A]'
@@ -189,7 +200,7 @@ export const Nav: React.FC<NavProps> = ({
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-[540px] bg-white border border-gray-200 rounded-2xl shadow-2xl p-6 z-50 grid grid-cols-3 gap-6 text-left"
+                        className="absolute top-full left-0 mt-2 w-[660px] bg-white border border-gray-200 rounded-2xl shadow-2xl p-5 z-50 grid grid-cols-4 gap-4 text-left"
                       >
                         {/* MEN COLUMN */}
                         <div>
@@ -247,15 +258,50 @@ export const Nav: React.FC<NavProps> = ({
                             ))}
                           </div>
                         </div>
+
+                        {/* ACCESSORIES COLUMN */}
+                        <div>
+                          <h4 className="text-xs font-mono font-extrabold text-[#0F172A] border-b border-gray-200 pb-2 mb-3 tracking-widest uppercase flex items-center justify-between">
+                            <span>ACCESSORIES</span>
+                          </h4>
+                          <div className="flex flex-col gap-2">
+                            {['Tote Bags', 'Laptop Sleeves', 'Utility Pouches', 'Notebook Covers', 'Card & Keychains'].map((acc) => (
+                              <button
+                                key={`dropdown-acc-${acc}`}
+                                onClick={handleAccessoriesClick}
+                                className="text-xs text-left text-slate-600 hover:text-[#C8A46A] font-medium py-1 transition-colors hover:translate-x-1 duration-200 flex items-center justify-between"
+                              >
+                                <span>{acc}</span>
+                                <span className="text-[10px] font-mono text-slate-400">→</span>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
 
+                {/* ACCESSORIES button */}
+                <button
+                  onClick={handleAccessoriesClick}
+                  className={`text-xs xl:text-sm uppercase tracking-[1.5px] xl:tracking-[2px] font-medium transition-colors py-1 cursor-pointer ${
+                    isNavActive
+                      ? selectedCategory === 'Accessories'
+                        ? 'text-[#C8A46A] font-bold'
+                        : 'text-[#0F172A] hover:text-[#C8A46A]'
+                      : selectedCategory === 'Accessories'
+                      ? 'text-[#C8A46A] font-bold drop-shadow-md'
+                      : 'text-white hover:text-[#C8A46A] drop-shadow-md'
+                  }`}
+                >
+                  ACCESSORIES
+                </button>
+
                 {/* ABOUT US button */}
                 <button
                   onClick={handleAboutClick}
-                  className={`text-[15px] uppercase tracking-[2px] font-medium transition-colors py-1 cursor-pointer ${
+                  className={`text-xs xl:text-sm uppercase tracking-[1.5px] xl:tracking-[2px] font-medium transition-colors py-1 cursor-pointer ${
                     isNavActive
                       ? 'text-[#0F172A] hover:text-[#C8A46A]'
                       : 'text-white hover:text-[#C8A46A] drop-shadow-md'
@@ -369,22 +415,28 @@ export const Nav: React.FC<NavProps> = ({
               </div>
 
               {/* Mobile Quick Links */}
-              <div className="flex gap-2 mt-3">
+              <div className="grid grid-cols-3 gap-2 mt-3">
                 <button
                   onClick={() => {
                     handleShopClick();
                     setMobileMenuOpen(false);
                   }}
-                  className="flex-1 py-3 bg-[#0F172A] text-white font-mono text-xs font-bold uppercase tracking-widest rounded-xl"
+                  className="py-2.5 px-2 bg-[#0F172A] text-white font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-xl text-center"
                 >
                   SHOP ALL
+                </button>
+                <button
+                  onClick={handleAccessoriesClick}
+                  className="py-2.5 px-2 bg-amber-500 text-slate-900 font-mono text-[10px] sm:text-xs font-extrabold uppercase tracking-wider rounded-xl text-center shadow-sm"
+                >
+                  ACCESSORIES
                 </button>
                 <button
                   onClick={() => {
                     handleAboutClick();
                     setMobileMenuOpen(false);
                   }}
-                  className="flex-1 py-3 bg-gray-100 text-[#0F172A] font-mono text-xs font-bold uppercase tracking-widest rounded-xl border border-gray-200"
+                  className="py-2.5 px-2 bg-gray-100 text-[#0F172A] font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-xl border border-gray-200 text-center"
                 >
                   ABOUT US
                 </button>
@@ -392,22 +444,54 @@ export const Nav: React.FC<NavProps> = ({
 
               {/* Mobile Collections Menu */}
               <div className="mt-6 space-y-6">
-                {['Men', 'Women', 'Kids'].map((aud) => (
+                {['Men', 'Women', 'Kids', 'Accessories'].map((aud) => (
                   <div key={`mob-${aud}`}>
-                    <h4 className="text-sm font-mono font-bold text-[#0F172A] uppercase border-b border-gray-100 pb-2 mb-2">
-                      {aud === 'Kids' ? 'KIDS (CHILDREN)' : aud.toUpperCase()}
+                    <h4 className="text-sm font-mono font-bold text-[#0F172A] uppercase border-b border-gray-100 pb-2 mb-2 flex items-center justify-between">
+                      <span>
+                        {aud === 'Kids'
+                          ? 'KIDS (CHILDREN)'
+                          : aud === 'Accessories'
+                          ? 'UPCYCLED ACCESSORIES'
+                          : aud.toUpperCase()}
+                      </span>
+                      {aud === 'Accessories' && (
+                        <span className="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-mono font-bold">
+                          ZERO WASTE
+                        </span>
+                      )}
                     </h4>
-                    <div className="grid grid-cols-2 gap-2 text-xs font-sans text-slate-700">
-                      {subCategories.map((sub) => (
-                        <button
-                          key={`mob-${aud}-${sub}`}
-                          onClick={() => handleSubCategorySelect(aud, sub)}
-                          className="text-left py-1 hover:text-red-600"
-                        >
-                          {sub}
-                        </button>
-                      ))}
-                    </div>
+                    {aud === 'Accessories' ? (
+                      <div className="grid grid-cols-2 gap-2 text-xs font-sans text-slate-700">
+                        {[
+                          'Tote Bags',
+                          'Laptop Sleeves',
+                          'Utility Pouches',
+                          'Notebook Covers',
+                          'Card Holders',
+                          'Keychains & Scrunchies'
+                        ].map((accItem) => (
+                          <button
+                            key={`mob-acc-${accItem}`}
+                            onClick={handleAccessoriesClick}
+                            className="text-left py-1 hover:text-amber-600 font-medium flex items-center gap-1.5"
+                          >
+                            <span className="text-amber-500 text-[10px]">✦</span> {accItem}
+                          </button>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-2 gap-2 text-xs font-sans text-slate-700">
+                        {subCategories.map((sub) => (
+                          <button
+                            key={`mob-${aud}-${sub}`}
+                            onClick={() => handleSubCategorySelect(aud, sub)}
+                            className="text-left py-1 hover:text-red-600"
+                          >
+                            {sub}
+                          </button>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
